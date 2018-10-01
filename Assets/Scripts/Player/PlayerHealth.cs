@@ -23,18 +23,18 @@ public class PlayerHealth : MonoBehaviour
     bool damaged = false;
 
 
-    void Awake ()
+    void Awake()
     {
-        anim = GetComponent <Animator> ();
-        playerAudio = GetComponent <AudioSource> ();
-        playerMovement = GetComponent <PlayerMovement> ();
+        anim = GetComponent<Animator>();
+        playerAudio = GetComponent<AudioSource>();
+        playerMovement = GetComponent<PlayerMovement>();
         //playerShooting = GetComponentInChildren <PlayerShooting> ();
         currentHealth = startingHealth;
         playerAudio.Stop();
     }
 
 
-    void Update ()
+    void Update()
     {
         //if(damaged)
         //{
@@ -50,40 +50,43 @@ public class PlayerHealth : MonoBehaviour
     }
 
 
-    public void TakeDamage (int amount)
+    public void TakeDamage(int amount)
     {
         damaged = true;
 
         currentHealth -= amount;
 
         //healthSlider.value = currentHealth;
-        playerAudio.Play ();
+        playerAudio.Play();
 
-        if(currentHealth <= 0 && !isDead)
+        if (currentHealth <= 0 && !isDead)
         {
-            Death ();
+            Death();
         }
     }
 
 
-    void Death ()
+    void Death()
     {
         isDead = true;
 
         //playerShooting.DisableEffects ();
 
-        anim.SetTrigger ("Die");
+        anim.SetTrigger("Die");
 
         playerAudio.clip = deathClip;
-        playerAudio.Play ();
+        playerAudio.Play();
 
         playerMovement.enabled = false;
         //playerShooting.enabled = false;
+
+
     }
 
 
-    //public void RestartLevel ()
-    //{
-    //    SceneManager.LoadScene (0);
-    //}
+    public void RestartLevel ()
+    {
+        SceneManager.LoadScene (0);
+    }
 }
+

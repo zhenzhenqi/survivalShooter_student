@@ -775,8 +775,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 515112972}
-  enemy: {fileID: 1198782660}
-  spawnTime: 3
+  enemy: {fileID: 1131941994203396, guid: 22ff63ef4b6f34b07a4086ccca40794e, type: 2}
+  spawnTime: 2
   spawnPoints:
   - {fileID: 1062258347}
 --- !u!4 &1162016802
@@ -834,11 +834,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 22ff63ef4b6f34b07a4086ccca40794e, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1198782660 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1131941994203396, guid: 22ff63ef4b6f34b07a4086ccca40794e,
-    type: 2}
-  m_PrefabInternal: {fileID: 1198782658}
 --- !u!1001 &1292051469
 Prefab:
   m_ObjectHideFlags: 0
